@@ -45,10 +45,10 @@ function startLoop() {
 
         // CH1: Konstanter schneller Takt
         tempo = (!tempo) ? 1 : 0;
-        channels[0].data.push({ "state": tempo, "duration": 10 });
+        channels[0].data.push({ "state": (tempo), "duration": 10 });
 
         // CH2: Reale Datenbits
-        channels[1].data.push({ "state": (state) ? 1 : 0, "duration": 10 });
+        channels[1].data.push({ "state": (state & 1), "duration": 10 });
 
         // CH3: ???
         channels[2].data.push({ "state": 0, "duration": 10 });

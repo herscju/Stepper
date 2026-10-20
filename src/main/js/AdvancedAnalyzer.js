@@ -176,7 +176,12 @@ export default class AdvancedAnalyzer extends Analyzer {
             this.context.stroke();
 
             // Textbeschriftung (µs)
+            this.context.strokeStyle = '#999';
+            this.context.save();
+            this.context.translate(us, 10);
+            this.context.rotate(-Math.PI / 2);
             this.context.fillText(`${us.toFixed(1)} µs`, x + 4, timelineHeight - 4);
+            this.context.restore();
         }
 
         // Trennlinie unter dem Lineal
@@ -197,7 +202,7 @@ export default class AdvancedAnalyzer extends Analyzer {
             const yLow = bottomY - padding;
 
             // Kanal-Hintergrundbeschriftung
-            this.context.fillStyle = 'rgba(255,255,255,0.05)';
+            this.context.fillStyle = '#999';
             this.context.font = '11px sans-serif';
             this.context.fillText(ch.name, 10, topY + 18);
 
