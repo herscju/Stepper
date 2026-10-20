@@ -7,3 +7,84 @@ body {
     margin: 0;
 }
 
+.start-btn {
+    /* Wichtig für die Kreisform: Gleiche Breite und Höhe */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    /* Macht den Button kreisrund */
+
+    /* Farben und Schrift */
+    background-color: #2ecc71;
+    /* Schönes Start-Grün */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    /* Schreibt "START" in Großbuchstaben */
+
+    /* Rahmen und Abstände entfernen / korrigieren */
+    border: none;
+    cursor: pointer;
+    /* Zeigt die Hand beim Drüberfahren */
+    outline: none;
+
+    /* Sanfter Übergang für den Hover-Effekt */
+    transition: background-color 0.3s ease, transform 0.1s ease;
+
+    /* Optional: Ein leichter Schatten für mehr Tiefe */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Effekt beim Drüberfahren (Hover) */
+.start-btn:hover {
+    background-color: #27ae60;
+    /* Dunkleres Grün */
+}
+
+/* Effekt beim Anklicken (Active) */
+.start-btn:active {
+    transform: scale(0.95);
+    /* Button wird minimal kleiner beim Klick */
+}
+
+.stop-btn {
+    /* Wichtig für die Kreisform: Gleiche Breite und Höhe */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    /* Macht den Button kreisrund */
+
+    /* Farben und Schrift */
+    background-color: #cc382e;
+    /* Schönes Start-Grün */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    /* Schreibt "START" in Großbuchstaben */
+
+    /* Rahmen und Abstände entfernen / korrigieren */
+    border: none;
+    cursor: pointer;
+    /* Zeigt die Hand beim Drüberfahren */
+    outline: none;
+
+    /* Sanfter Übergang für den Hover-Effekt */
+    transition: background-color 0.3s ease, transform 0.1s ease;
+
+    /* Optional: Ein leichter Schatten für mehr Tiefe */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Effekt beim Drüberfahren (Hover) */
+.stop-btn:hover {
+    background-color: #ae4227;
+    /* Dunkleres Grün */
+}
+
+/* Effekt beim Anklicken (Active) */
+.stop-btn:active {
+    transform: scale(0.95);
+    /* Button wird minimal kleiner beim Klick */
+}

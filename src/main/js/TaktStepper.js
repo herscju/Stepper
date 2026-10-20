@@ -51,7 +51,7 @@ export default class TaktStepper {
      */
     tick() {
         // Bestimmt, ob der aktuelle Takt im "An"-Bereich liegt
-        const istAn = this.currentTick < this.onTick;
+        const isOn = this.currentTick < this.onTick;
 
         // Takt hochzählen und beim Erreichen des Gesamtzyklus zurücksetzen
         this.currentTick = (this.currentTick + 1) % this.totalTicks;
@@ -59,7 +59,7 @@ export default class TaktStepper {
         // Anzahl ticks hochzählen
         this.numberOfTicks++;
 
-        return istAn;
+        return isOn;
     }
 
     /**

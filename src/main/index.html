@@ -3,11 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS Stepper :: Dashboard</title>
 
-    <link href="./css/stepper.css" rel="stylesheet">
-    </link>
+    <link href="./css/stepper.css" rel="stylesheet"></link>
+    <link href="./css/analyzer.css" rel="stylesheet"></link>
 
     <!-- Favicons -->
     <link href="./img/favicon-96x96.png" rel="icon" type="image/png" sizes="96x96" />
@@ -18,12 +18,51 @@
 <body>
     <h1>JavaScript Stepper</h1>
     <div class="container">
-        <ul>
-            
+        <button id="start" class="start-btn">Start</button>
+        <button id="stop" class="stop-btn">Stop</button>
+    </div>
+    <div class="container">
+        <div class="controls-info">
+            <div class="info">
+                <p>🖱️ <span class="shortcut">Mausrad:</span> Zeitachse zoomen | <span class="shortcut">Klicken & Ziehen:</span> Scrollen</p>
+            </div>
+            <div class="info">
+                <p>⌨️ <span class="shortcut">Taste [A] oder [B] + Mausklick:</span> Marker setzen</p>
+                <p>⌨️ <span class="shortcut">Taste [A] oder [B] + Pfeiltaste links / rechts:</span> Marker verschieben
+                </p>
+            </div>
+        </div>
+
+        <!-- Canvas mit fester Auflösung für scharfe Renderings -->
+        <canvas id="analyzerCanvas" width="1000" height="400"></canvas>
+
+        <div class="measurements">
+            <div class="meas-box active-a">
+                <div>Marker A</div>
+                <div id="valA">--</div>
+            </div>
+            <div class="meas-box active-b">
+                <div>Marker B</div>
+                <div id="valB">--</div>
+            </div>
+            <div class="meas-box active-delta">
+                <div>Delta (B - A)</div>
+                <div id="valDelta">--</div>
+            </div>
+            <div class="meas-box active-delta">
+                <div>Frequenz</div>
+                <div id="valFreq">--</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <ul id="ticks">
+            <!-- Add ticks to list -->
         </ul>
     </div>
 
-     <script src="./js/index.js" type="module"></script>
+    <script src="./js/index.js" type="module"></script>
 </body>
 
 </html>
