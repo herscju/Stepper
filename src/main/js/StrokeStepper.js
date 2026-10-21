@@ -1,7 +1,7 @@
 /**
  * 
  */
-export default class TaktStepper {
+export default class StrokeStepper {
 
     onTick = 0;
     offTick = 0;

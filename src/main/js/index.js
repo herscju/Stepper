@@ -1,5 +1,5 @@
 import RandomNumberGenerator from "./RandomNumberGenerator.js"
-import TaktStepper from "./TaktStepper.js"
+import StrokeStepper from "./StrokeStepper.js"
 import AdvancedAnalyzer from "./AdvancedAnalyzer.js"
 import Analyzer from "./Analyzer.js";
 
@@ -16,7 +16,7 @@ counterGenerator.setMinMax(3, 20);
 const stepperGenerator = new RandomNumberGenerator();
 stepperGenerator.setMinMax(2, 6);
 
-const stepper = new TaktStepper(stepperGenerator.random(), stepperGenerator.random());
+const stepper = new StrokeStepper(stepperGenerator.random(), stepperGenerator.random());
 
 const channels = [
     { "name": "CH1: CLK (Clock)", "color": Analyzer.SIGNAL_COLOR, "data": [] },
