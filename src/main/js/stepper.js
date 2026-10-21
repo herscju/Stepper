@@ -1,7 +1,7 @@
-import RandomNumberGenerator from "./RandomNumberGenerator.js"
+import RandomNumberGenerator from "./vendor/RandomNumberGenerator.js"
 import StrokeStepper from "./StrokeStepper.js"
-import AdvancedAnalyzer from "./AdvancedAnalyzer.js"
-import Analyzer from "./Analyzer.js";
+import AdvancedAnalyzer from "./vendor/AdvancedAnalyzer.js"
+import Analyzer from "./vendor/Analyzer.js";
 
 let intervalId = null;
 let isRunning = false;
