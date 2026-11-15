@@ -31,10 +31,18 @@ let tempo = 0;
 
 let counter = 0;
 let loopNbr = 0;
-function startLoop() {
+
+/**
+ * 
+ * @param {*} evnt 
+ * @returns 
+ */
+function startLoop(evnt) {
     if (isRunning) {
         return;  // Doppelten Start verhindern
     }
+
+    evnt.preventDefault();
 
     isRunning = true;
 
@@ -64,12 +72,24 @@ function startLoop() {
     }, 1000);
 }
 
-function stopLoop() {
+/**
+ * 
+ * @param {*} evnt 
+ */
+function stopLoop(evnt) {
+
+    evnt.preventDefault();
+
     isRunning = false;
     clearInterval(intervalId);
     intervalId = null;
 }
 
+/**
+ * 
+ * @param {*} state 
+ * @param {*} i 
+ */
 function updateInfo(state, i) {
 
     const number = i.toString().padStart(4, '0')
@@ -78,11 +98,19 @@ function updateInfo(state, i) {
     updateList(listNode, text);
 }
 
+/**
+ * 
+ * @param {*} listNode 
+ * @param {*} i 
+ */
 function updateList(listNode, i) {
     const itemNode = document.createElement("li");
     itemNode.innerText = i;
     listNode.appendChild(itemNode);
 }
 
-startBtn.addEventListener('click', () => startLoop());
-stopBtn.addEventListener('click', () => stopLoop());
+/**
+ * 
+ */
+startBtn.addEventListener('click', (evnt) => startLoop(evnt));
+stopBtn.addEventListener('click', (evnt) => stopLoop(evnt));

@@ -30,13 +30,13 @@ export default class StrokeStepper {
 
     /**
      * Ermöglicht das Ändern von m und n zur Laufzeit
-     * @param newOn 
-     * @param newOff 
+     * @param onTick 
+     * @param offTick 
      */
-    update(newOn, newOff) {
-        this.onTick = newOn;     // m Takte
-        this.offTick = newOff;   // n Takte
-        this.totalTicks = newOn + newOff;
+    update(onTick, offTick) {
+        this.onTick = onTick;     // m Takte
+        this.offTick = offTick;   // n Takte
+        this.totalTicks = this.onTick + this.offTick;
 
         // Sicherheitsnetz: Falls der aktuelle Takt durch die Änderung 
         // außerhalb des neuen Gesamtzyklus liegt, setzen wir ihn zurück.
